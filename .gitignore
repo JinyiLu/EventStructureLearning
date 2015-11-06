@@ -42,6 +42,9 @@ local.properties
 .springBeans
 
 # latex
+midterm-blx.bib
+*.xml
+*.fdb_latexmk
 *.acn
 *.acr
 *.alg
