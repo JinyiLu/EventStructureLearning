@@ -1,0 +1,23 @@
+% problem related 
+% tech related
+% method, pros/cons, related%difference, similarity
+Recently, there has been increasing interest in automatically 
+learning event structures from text. 
+Bejan \cite{B08} proposed an unsupervied learning approach for discovering 
+event scenarios from texts. 
+They made use of the Latent Dirichlet Allocation probabilistic 
+model that uses the observed events from texts to learn latent scenarios.
+Compared with the FrameNet \cite{B98framenet}, they expanded the coverage of the 
+lexical database and increased the flexibility of learning process.
+However, they failed to extract the relationship between the events in the scenarios.
+
+Chambers and Jurafsky has also proposed a series entity-driven approaches \cite{CJ08chain, CJ09schema, CJ11template}.
+They made use of coreferring entity mentions to knit events and entities together into an event schema. 
+They first focused on the narrative event chain, which is a partially ordered set of events related by a common protagonist. They made used of temporal classifier to partially order the connected events and agglomerative clustering algorithm to generate discrete narrative event chains \cite{CJ08chain}. Then they moved on to 
+using semantic role labeling to jointly modeling the event arguments with events \cite{CJ09schema}. It allowed they to model a document's entire narrative, not just one main actor. 
+However, there are some limitations in this work, including some schemas lack a common topic and distinct roles are incorrectly mixed into a single actor. These limitations were overcame by Balasubramanian et al. \cite{BSME13}.They used co-occurrence statistics of semantically typed relational triples instead of the pair-wise representation, to construct a Rel-graph. They also analyzed the graph to rank the tuples and merge arguments to form the actors in the frame. Chambers and Jurafsky also introduced a pipelined approach to use the learned template structure to solve the traditional template-based information extraction problem \cite{CJ11template}.
+
+In contrast to the previous approaches, which require several ad-hoc metrics and parameters, 
+Chambers \cite{C13} adapted the previous entity-driven approach to a single model that requires fewer parameters and far less training data and produced state-of-the-art performance on a traditional extraction task. They were the first to show how coreference chains can be used for schema induction in a probabilistic model.
+At the same time, Cheung et al. \cite{CPV13} proposed PROFINDER, which was a generative model for schema induction using a sequence model (HMM-based) of verb clauses. Their probabilistic approach made it easy to extend the model with additional linguistic insights and prior knowledge.
+
